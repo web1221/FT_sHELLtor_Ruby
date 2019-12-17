@@ -1,0 +1,22 @@
+<h1>Welcome to the sHELLtor</h1>
+
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Temperment</th>
+    </tr>
+    <% @animals.each do |ani| %>
+    <tr>
+        <td><%= ani.name %></td>
+        <td><%= ani.species %></td>
+        <td><%= ani.temperment %></td>
+    </tr>
+    <% end %>
+    <form method="post">
+        <label for="search"> Search by species:
+            <input type="text" name="search">
+        </label>
+        <button type="submit">Go!</button>
+    </form>
+</table>
